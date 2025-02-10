@@ -1,0 +1,29 @@
+<section class="chat" *ngIf="chatIsReady$ | async; else unavailable">
+  <div class="chat-container">
+    <!-- New Channel Creation Section -->
+    <app-new-channel (saved)="onCreate($event)"></app-new-channel>
+
+    <!-- Main Chat Section -->
+    <div id="root">
+      <stream-channel-list></stream-channel-list>
+      <stream-channel>
+        <stream-channel-header></stream-channel-header>
+        <stream-message-list></stream-message-list>
+        <stream-notification-list></stream-notification-list>
+        <stream-message-input></stream-message-input>
+      </stream-channel>
+    </div>
+  </div>
+</section>
+
+
+<ng-template #unavailable>
+  <div class ="chat-notification">chat is not available</div>
+</ng-template>
+
+<!-- <h3>User List</h3>
+<ul>
+  <li *ngFor="let user of users$ | async">
+    {{ user.name }} ({{ user.phone }})
+  </li>
+</ul> -->

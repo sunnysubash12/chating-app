@@ -1,0 +1,178 @@
+/* Import Stream Chat Angular styles */
+@import 'stream-chat-angular/src/assets/styles/css/index.css';
+
+/* Global Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f8;
+}
+
+/* Container for chat and new channel section */
+.chat-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    height: 100%;
+}
+
+/* New Channel Section */
+app-new-channel {
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Root container for chat area */
+#root {
+    display: flex;
+    flex-grow: 1;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex-direction: row;
+}
+
+/* Sidebar (Channel List) */
+stream-channel-list {
+    width: 30%;
+    background-color: #2f3136;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #1e1e1e;
+    overflow-y: auto;
+    height: 100vh; /* Full height for the sidebar */
+    position: relative;
+}
+
+/* Channel List Header */
+stream-channel-list::before {
+    content: "Chats";
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #202225;
+    border-bottom: 1px solid #1e1e1e;
+    text-align: center;
+}
+
+/* Individual Channel Item */
+stream-channel-list .channel-item {
+    padding: 15px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+stream-channel-list .channel-item:hover {
+    background-color: #40444b;
+}
+
+/* Active Channel */
+stream-channel-list .channel-item.active {
+    background-color: #5865f2;
+    color: white;
+}
+
+/* Chat Area */
+stream-channel {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    position: relative;
+    height: 100%; /* Full height for the chat area */
+}
+
+/* Chat Header */
+stream-channel .chat-header {
+    padding: 15px;
+    background-color: #5865f2;
+    color: white;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Chat Messages Area - Scrollable */
+stream-channel .messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+    height: calc(100% - 160px); /* Adjusted height to make it scrollable */
+}
+
+/* Individual Message */
+stream-channel .message {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Message Bubble */
+stream-channel .message .bubble {
+    max-width: 70%;
+    padding: 10px 15px;
+    background-color: #e3e3e3;
+    border-radius: 15px;
+    position: relative;
+    word-wrap: break-word;
+}
+
+/* Sent Messages */
+stream-channel .message.sent .bubble {
+    background-color: #5865f2;
+    color: white;
+    margin-left: auto;
+    border-bottom-right-radius: 0;
+}
+
+/* Received Messages */
+stream-channel .message.received .bubble {
+    background-color: #e0e0e0;
+    border-bottom-left-radius: 0;
+}
+
+/* Message Input Area */
+stream-channel .message-input {
+    display: flex;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-top: 1px solid #ddd;
+}
+
+stream-channel .message-input input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    background-color: white;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+stream-channel .message-input button {
+    padding: 10px 15px;
+    background-color: #5865f2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+stream-channel .message-input button:hover {
+    background-color: #4752c4;
+}
+
+/* Ensure content is scrollable without pushing layout */
+.chat-container {
+    overflow-y: auto;
+    height: 100vh;
+}
