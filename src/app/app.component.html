@@ -13,8 +13,7 @@
         <stream-message-input></stream-message-input>
       </stream-channel>
     </div>
-    <button (click)="logout()" class="btn btn-sm btn-danger">Logout</button>
-
+    <app-logout [currentUserName]="this.currentUserName" (logoutEvent)="logout()"></app-logout>
   </div>
 </section>
 
@@ -36,4 +35,8 @@
         <button class="btn btn-login" (click)="login()">Login</button>
       </div>
     </form></div>
+</ng-template>
+
+<ng-template #channelActionsTemplate let-channel="channel">
+  <app-invite-button [channel]="channel"></app-invite-button>
 </ng-template>

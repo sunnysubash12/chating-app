@@ -1,5 +1,9 @@
 /* Import Stream Chat Angular styles */
+@use '@angular/material'as mat;
+
 @import 'stream-chat-angular/src/assets/styles/css/index.css';
+@include mat.core();
+
 
 /* Global Styles */
 html, body {
@@ -278,4 +282,24 @@ stream-channel .message-input button:hover {
     .btn-login {
         padding: 10px;
     }
+}
+/* Updated User Info Styling */
+.user-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #202225;
+    color: white;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 8px;
+    margin: 10px 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Adjusted 'Logged in as' text */
+.user-info span {
+    font-weight: bold;
+    font-size: 16px;
+    color: #b0b3b8;  /* Lighter text for user name */
 }

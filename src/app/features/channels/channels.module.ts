@@ -6,10 +6,16 @@ import { MatButtonModule } from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
 import { StreamChatModule } from 'stream-chat-angular';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
-import { NewChannelComponent } from './new-channel/new-channel.component'; // Importing the component
+import { NewChannelComponent } from './new-channel/new-channel.component'; 
+import { InviteButtonComponent } from './invite-button/invite-button.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // <-- Import this
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+
+
 
 @NgModule({
   imports: [
+    BrowserAnimationsModule,
     CommonModule,
     MatFormFieldModule,
     MatInputModule,
@@ -17,10 +23,13 @@ import { NewChannelComponent } from './new-channel/new-channel.component'; // Im
     ReactiveFormsModule,
     StreamChatModule,
     MatAutocompleteModule,
-    NewChannelComponent  // ✅ Import standalone component here
+    NewChannelComponent,
+    InviteButtonComponent,
+    NoopAnimationsModule
   ],
   exports: [
-    NewChannelComponent, // ✅ Now it can be exported
+    NewChannelComponent, 
+    InviteButtonComponent,
   ]
 })
 export class ChannelsModule { }

@@ -1,0 +1,21 @@
+/* Styled Logout Button */
+.user-info button {
+    background-color: #ff5c5c;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.user-info button:hover {
+    background-color: #e14d4d;
+    transform: translateY(-2px);
+}
+
+.user-info button:active {
+    background-color: #c43d3d;
+    transform: translateY(0);
+}
