@@ -4,9 +4,10 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --output-path dist/ --base-href /chat-frontend/",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "deploy": "ng build --configuration production --output-path dist/chat-frontend && npx angular-cli-ghpages --dir=dist/chat-frontend"
   },
   "private": true,
   "dependencies": {

@@ -20,6 +20,7 @@
             "outputPath": "dist/chat-frontend",
             "index": "src/index.html",
             "browser": "src/main.ts",
+            "baseHref": "/chat-frontend/",
             "polyfills": [
               "zone.js"
             ],
