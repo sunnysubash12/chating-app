@@ -27,7 +27,7 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "src/index.html"
+              "src/404.html"
             ],
             "styles": [
               "src/styles.scss",
