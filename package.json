@@ -1,13 +1,15 @@
 {
-  "name": "chat-frontend",
+  "name": "chating-app",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --output-path dist/ --base-href /chat-frontend/",
+    "build": "ng build --configuration production --base-href /chating-app/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "ng build --configuration production --output-path dist/chat-frontend && npx angular-cli-ghpages --dir=dist/chat-frontend"
+    "deploy": "npm run build && npx angular-cli-ghpages --dir=dist/chating-app/browser",
+    "clean": "rimraf dist"
+
   },
   "private": true,
   "dependencies": {

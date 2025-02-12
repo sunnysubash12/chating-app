@@ -36,6 +36,8 @@ export class AppComponent implements OnInit, AfterViewInit {
   public users: any[] = [];
   public currentUserId:string='';
   public currentUserName:string='';
+  title = 'chating-app'; 
+
 
 
 @ViewChild('channelActionsTemplate')

@@ -1,9 +1,5 @@
 /* Import Stream Chat Angular styles */
-@use '@angular/material'as mat;
-
 @import 'stream-chat-angular/src/assets/styles/css/index.css';
-@include mat.core();
-
 
 /* Global Styles */
 html, body {
@@ -303,3 +299,8 @@ stream-channel .message-input button:hover {
     font-size: 16px;
     color: #b0b3b8;  /* Lighter text for user name */
 }
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }

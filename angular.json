@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "chat-frontend": {
+    "chating-app": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,10 +17,10 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/chat-frontend",
+            "outputPath": "dist/chating-app",
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "baseHref": "/chat-frontend/",
+            "baseHref": "/chating-app/",
             "polyfills": [
               "zone.js"
             ],
@@ -63,10 +63,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "chat-frontend:build:production"
+              "buildTarget": "chating-app:build:production"
             },
             "development": {
-              "buildTarget": "chat-frontend:build:development"
+              "buildTarget": "chating-app:build:development"
             }
           },
           "defaultConfiguration": "development"
