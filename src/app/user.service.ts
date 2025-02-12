@@ -20,7 +20,7 @@ export class UserService {
 
   public users: User[] = [];
   public user: User | null = null;
-  private apiUrl = 'http://chatappp-env.eba-vjmfbrra.eu-west-2.elasticbeanstalk.com';
+  private apiUrl = 'https://chatappp-env.eba-vjmfbrra.eu-west-2.elasticbeanstalk.com';
   constructor(private http: HttpClient) { }
 
 
